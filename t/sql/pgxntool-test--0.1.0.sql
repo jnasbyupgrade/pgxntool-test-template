@@ -5,11 +5,4 @@ CREATE FUNCTION "pgxntool-test"(
 SELECT $1 + $2 -- 9.1 doesn't support named sql language parameters
 $body$;
 
-CREATE FUNCTION "pgxntool-test"(
-  a bigint
-  , b bigint
-) RETURNS bigint LANGUAGE sql IMMUTABLE AS $body$
-SELECT $1 + $2 -- 9.1 doesn't support named sql language parameters
-$body$;
-
 -- vi: expandtab ts=2 sw=2
